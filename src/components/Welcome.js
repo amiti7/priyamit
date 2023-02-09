@@ -54,14 +54,14 @@ Button.defaultProps = {
         src={video}
         width="100%" height="100%"
         autoPlay
-        controls
+        
         onEnded={() => setVidIndex((idx) => idx + 1)}
         muted="muted"
       />
 
      <video
         style={{ display: vidIndex === 0 ? "none" : "block" }}
-        controls loop  width="100%" height="100%"
+         loop  width="100%" height="100%"
         ref={ref}
         muted="muted"
         >
