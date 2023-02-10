@@ -4,7 +4,7 @@ import videoLoop from '../Assets/ganeshLoop.mp4';
 import styled from "styled-components";
 
 
-const Welcome = () => {
+const Welcome = ({setWelcomeComponent}) => {
     const [vidIndex, setVidIndex] = useState(0);
     const [opacity, setOpacity] = useState(100)
     const ref = useRef(null);
@@ -70,7 +70,7 @@ Button.defaultProps = {
      <div style={{bottom:'20%',position:'absolute',  right:"35%"}}>
         <Button  onClick={()=>{
           setOpacity(0)
-          setTimeout(()=>{console.log('closed')},200)
+          setTimeout(()=>{setWelcomeComponent(false)},600)
           }}>Continue</Button>
       </div>
     </div>

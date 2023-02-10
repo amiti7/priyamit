@@ -11,6 +11,7 @@ import Welcome from "./components/Welcome";
 import Navbar from "./navbar/Navbar";
 
 function App() {
+  const [welcomComponent, setWelcomeComponent] = useState(true);
   return (
     <div>
       <Router>
@@ -19,10 +20,10 @@ function App() {
            {/* <Route path="*" element={<Welcome/>}></Route> */}
            <Route path="/info" element={<Locations/>}></Route>
            <Route path="/rsvp" element={<RSVP/>}></Route>
-           <Route path="/" element={<Home/>}></Route>
+           <Route path="/" element={<Home />}></Route>
         </Routes>
       </Router>
-      <Welcome/>
+      {welcomComponent?<Welcome setWelcomeComponent={setWelcomeComponent} />: null}
     </div>
   );
 }
