@@ -5,7 +5,7 @@ import {NavLink} from 'react-router-dom';
 
 const Navbar = () => {
   return (
-    <div style={{position:'absolute', zIndex:1, width:'100%'}}>
+    <div style={{position:'absolute', zIndex:3, width:'100%'}}>
         <nav class="navbar">
             <ul style={{paddingLeft:'20%'}}>
                 

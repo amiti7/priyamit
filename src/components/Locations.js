@@ -9,13 +9,18 @@ const Locations = () => {
             <img height="100%" width="100%" src={two} alt="">
             </img>
         </div>
-         <div style={{position:'relative', marginTop:'34%', zIndex:2}}>
-            <div style={{position:'relative', fontSize:'16px', width:'80%',  textAlign:'center',color:'#83181b', transform:'translateY(550%)',margin:'auto', textTransform:'capitalize'}}> 
-            How to react Amit : 
+         <div style={{position:'relative', marginTop:'10%', zIndex:2}}>
+            <div style={{position:'relative', fontSize:'16px', width:'80%',  textAlign:'center',color:'#83181b', transform:'translateY(600%)',margin:'auto', textTransform:'capitalize'}}> 
+            Venue:UDAY MARRIAGE LAWN, Sathigawan.
+            
            
             </div>
-            <div style={{ transform:'translateY(550%)'}} onClick={()=>{window.parent.open("https://goo.gl/maps/rYCDmysnAMuWGtkS8","_new")}}>
-                <img width="50px" src={maps}></img>
+            <div style={{position:'relative', fontSize:'16px', width:'80%',  textAlign:'center',color:'#83181b', transform:'translateY(650%)',margin:'auto', textTransform:'capitalize'}}> 
+            To reach venue, see the below google map location : 
+           
+            </div>
+            <div style={{margin:'auto', width:'20%', transform:'translateY(300%)', border:'1px solid green', borderRadius:'15px', padding:'1em'}} onClick={()=>{window.parent.open("https://goo.gl/maps/h4hqtC6K3sux45We9","_new")}}>
+                <img width="50px" src={maps} alt=""></img>
             </div>
            
         </div>
