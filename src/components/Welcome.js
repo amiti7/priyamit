@@ -48,7 +48,7 @@ Button.defaultProps = {
   theme: "blue"
 };
   return (
-    <div style={{position:'relative', height:'100vh', background:'black', opacity:`${opacity}%`, transition:"opacity 2s"}}>
+    <div style={{zIndex:`${opacity}`,position:'relative', height:'100vh', background:'black', opacity:`${opacity}%`, transition:"opacity 2s, zIndex 2s"}}>
         <video
         style={{ display: vidIndex === 1 ? "none" : "block" }}
         src={video}
@@ -68,7 +68,10 @@ Button.defaultProps = {
       <source src={videoLoop} type="video/mp4"/>
      </video>
      <div style={{bottom:'20%',position:'absolute',  right:"35%"}}>
-        <Button onClick={()=>{setOpacity(0)}}>Continue</Button>
+        <Button  onClick={()=>{
+          setOpacity(0)
+          setTimeout(()=>{console.log('closed')},200)
+          }}>Continue</Button>
       </div>
     </div>
   )

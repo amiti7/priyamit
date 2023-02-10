@@ -5,7 +5,7 @@ import Count from "../components/countdown/Count"
 const Home = () => {
   return (
     <div style={{ position:'absolute', width:'100%'}}>
-    <div style={{border:'1px solid #83181b', height:'99vh',overflow:'hidden', position:'absolute', borderRadius:'15px'}}>
+    <div style={{border:'1px solid #83181b', height:'90vh',overflow:'hidden', position:'absolute',top:'15%', borderRadius:'15px'}}>
         <img height="100%" width="100%" src={one} alt="">
         </img>
     </div>
@@ -25,7 +25,7 @@ const Home = () => {
         <div style={{ transform:'translateY(900%)', textAlign:'center', width:'fit-content', margin:'auto',color:'#83181b'}}>
             Starts in
         </div>
-        <div style={{fontSize:'46px', transform:'translateY(350%)', textAlign:'center', width:'fit-content', margin:'auto', color:'#cda2a3'}}>
+        <div style={{fontSize:'46px', transform:'translateY(160%)', textAlign:'center', width:'fit-content', margin:'auto', color:'#cda2a3'}}>
             <Count/>
         </div>
     </div>

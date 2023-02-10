@@ -1,0 +1,22 @@
+.navbar{
+    background-color: rgb(224, 224, 224);
+    border-radius: 30px;
+    
+}
+.navbar ul{
+    overflow: auto;
+}
+.navbar li{
+    float:left;
+    list-style: none; 
+    margin: 13px 5px;
+    
+}
+.navbar li a{
+    padding: 3px 3px;
+    text-decoration: none;
+    color: #83181b;
+}
+.navbar li a:hover{
+    color: red
+}
