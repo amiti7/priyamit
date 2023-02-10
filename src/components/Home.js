@@ -10,7 +10,7 @@ const Home = () => {
         </img>
     </div>
     <div style={{position:'relative', marginTop:'20%'}}>
-        <div style={{fontFamily:'cursive', lineHeight:'1',position:'relative', fontSize:'62px', width:'35%', textAlign:'center', transform:'translateY(50%)',margin:'auto', color:'#A8815D'}}> 
+        <div style={{fontFamily:'cursive', lineHeight:'1',position:'relative', fontSize:'62px', width:'35%', textAlign:'center', transform:'translateY(70%)',margin:'auto', color:'#A8815D'}}> 
         Priya & Amit
         </div>
         <div style={{position:'relative', fontSize:'16px', width:'80%',  textAlign:'center',color:'#83181b', transform:'translateY(350%)',margin:'auto', textTransform:'capitalize'}}> 
