@@ -9,11 +9,25 @@ import RSVP from "./components/RSVP";
 import Locations from "./components/Locations";
 import Welcome from "./components/Welcome";
 import Navbar from "./navbar/Navbar";
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
   const [welcomComponent, setWelcomeComponent] = useState(true);
   return (
+    
     <div>
+      <ToastContainer
+             pauseOnFocusLoss={false}
+             autoClose={5000}
+             hideProgressBar
+             newestOnTop={false}
+             closeOnClick
+             rtl={false}
+             draggable
+             pauseOnHover
+             limit={1}
+           />
       <Router>
       <Navbar></Navbar>
         <Routes>

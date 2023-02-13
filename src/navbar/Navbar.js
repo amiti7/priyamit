@@ -11,7 +11,7 @@ const Navbar = () => {
                 
                 <li><NavLink to="/">Invitation</NavLink></li>
                 <li><NavLink to="/info">Information</NavLink></li>
-                <li><NavLink to="/rsvp">RSVP</NavLink></li>
+                <li><NavLink to="/rsvp">Send Message</NavLink></li>
             </ul>
             </nav>
     </div>
