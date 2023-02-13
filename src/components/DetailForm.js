@@ -1,11 +1,33 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect, useCallback} from 'react';
 import styled from "styled-components";
 import axios from "axios";
 import {toast} from 'react-toastify';
 
 const DetailForm = () => {
   const [name, setName] = useState('');
-  const [ message, setMessage]  =useState('')
+  const [ message, setMessage]  =useState('');
+  const [count, setCount] = useState(0);
+
+  const getMessages = useCallback(async() => {
+    try{
+    const response = await axios.get(`https://api.steeleasy.in/api/trip-updates`,
+    {
+      headers: { 
+        'Content-Type': 'application/json'
+      },
+    }
+    );
+    if(response){
+      setCount(response?.data?.data?.length || 0)
+      return true
+    }
+  }catch(exc){
+    return false;
+  }
+  },[])
+  useEffect(()=>{
+    getMessages()
+  },[getMessages])
   const theme = {
     blue: {
       default: "#000000",
@@ -57,6 +79,7 @@ const sendMessage = async() => {
   }
   );
   if(response){
+    setCount(count+1)
     toast.success('Response saved')
     return true
   }
@@ -81,6 +104,8 @@ const sendMessage = async() => {
       <div style={{right:"35%"}}>
         <Button onClick={sendMessage}  >Send</Button>
       </div>
+      <label for="messageCount" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Total messages count: {count}</label>
+
     </div>
   )
 }
