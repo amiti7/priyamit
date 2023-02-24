@@ -14,14 +14,15 @@ import 'react-toastify/dist/ReactToastify.css';
 import ReactGA from 'react-ga';
 
 const trackinID = "UA-258134344-1";
-ReactGA.initialize(trackinID);
+const abc = ReactGA.initialize(trackinID);
+console.log('abc', abc)
 
 function App() {
   const [welcomComponent, setWelcomeComponent] = useState(false);
 
   useEffect(()=>{
     console.log('firing app load')
-  ReactGA.pageview(window.location.pathname)
+    ReactGA.pageview(window.location.pathname)
   },[])
   return (
     
