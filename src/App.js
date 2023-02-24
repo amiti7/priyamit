@@ -11,9 +11,17 @@ import Welcome from "./components/Welcome";
 import Navbar from "./navbar/Navbar";
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import ReactGA from 'react-ga';
+
+const trackinID = "UA-258134344-1";
+ReactGA.initialize(trackinID);
 
 function App() {
-  const [welcomComponent, setWelcomeComponent] = useState(true);
+  const [welcomComponent, setWelcomeComponent] = useState(false);
+
+  useEffect(()=>{
+  ReactGA.pageview(window.location.pathname)
+  },[])
   return (
     
     <div>
