@@ -1,7 +1,18 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import Count from "../components/countdown/Count"
+import ReactGA from 'react-ga';
+
 
 const HomeData = () => {
+  useEffect(()=>{
+    console.log('firing event home')
+    ReactGA.event({
+      category:'OpenedPage',
+      action:'test action',
+      label:'test label',
+      value:'test value'
+    })
+  },[])
   return (
     <div style={{zIndex:2, position:'fixed', top:'20%'}}>
             <div style={{color:'#A8815D',lineHeight:'1', fontFamily:'cursive',  fontSize:'52px', margin:'0em auto', width:'30%', textAlign:'center',}} class="block"> Priya & Amit </div>

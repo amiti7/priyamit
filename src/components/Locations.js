@@ -5,6 +5,7 @@ import ReactGA from 'react-ga';
 
 const Locations = () => {
   useEffect(()=>{
+    console.log('firing event')
     ReactGA.event({
       category:'OpenedPage',
       action:'test action',

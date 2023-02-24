@@ -20,6 +20,7 @@ function App() {
   const [welcomComponent, setWelcomeComponent] = useState(false);
 
   useEffect(()=>{
+    console.log('firing app load')
   ReactGA.pageview(window.location.pathname)
   },[])
   return (
